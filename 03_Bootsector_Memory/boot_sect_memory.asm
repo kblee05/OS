@@ -1,4 +1,4 @@
-[org 0x7C00] ;; boot loader
+[org 0x7C00] ; offset for memory
 
 the_secret:
     db "X"
