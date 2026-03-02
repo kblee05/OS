@@ -95,6 +95,7 @@ static int print_char(char c, int col, int row, char attr)
 		offset += 2;
 	}
 
+	// scroll
 	if (offset >= MAX_ROWS * MAX_COLS * 2) {
 		int i;
 

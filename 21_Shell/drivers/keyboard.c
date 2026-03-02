@@ -34,8 +34,10 @@ static void keyboard_callback(registers_t regs)
 		return;
 
 	if (scancode == BACKSPACE) {
-		backspace(key_buffer);
-		kprint_backspace();
+		if(key_buffer[0] != '\0') {
+			backspace(key_buffer);
+			kprint_backspace();
+		}
 	} else if (scancode == ENTER) {
 		kprint("\n");
 		user_input(key_buffer);
